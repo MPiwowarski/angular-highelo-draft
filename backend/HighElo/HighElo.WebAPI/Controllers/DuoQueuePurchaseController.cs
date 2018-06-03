@@ -2,25 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HighElo.WebAPI.Controllers
 {
-    [Route("api/[controller]")]
-    public class ValuesController : Controller
+    [Route("api/duo-queue-purchase")]
+    public class DuoQueuePurchaseController : Controller
     {
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "DuoQueuePurchaseController"};
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return "DuoQueuePurchaseController value";
         }
 
         // POST api/values

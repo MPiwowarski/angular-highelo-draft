@@ -5,15 +5,15 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HighElo.WebAPI.Controllers.Booster
+namespace HighElo.WebAPI.Controllers.Client
 {
-    [Route("api/booster/[controller]")]
+    [Route("api/client/[controller]")]
     public class DashboardController : Controller
     {
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "booster1", "booster2" };
+            return new string[] { "client1", "client2" };
         }
     }
 }
