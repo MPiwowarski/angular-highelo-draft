@@ -1,0 +1,16 @@
+#IntroImg {
+    background-image: url('../../../../assets/images/bigSize/jinx.jpg');
+    min-height: 624px;
+    width: 100%;
+    background-position: center;
+    background-size: cover; 
+    padding-bottom: 10px;
+}
+#IntroImg .headerText {
+    text-align: center;
+    padding-top: 250px;
+}
+
+.bonus {
+    font-size: 20px;
+}
