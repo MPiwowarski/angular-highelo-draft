@@ -1,40 +1,5 @@
 
- <style type="text/css">
-    .logo {
-        color: #00abec !important;
-    }
-
-    menu {
-        font-size: 1.2em !important;
-    }
-
-    .client-logo {
-        color: #a5ce00 !important;
-    }
-
-    .admin-logo {
-        color: orange !important;
-    }
-
-    .booster-logo {
-        color: #00abec  !important;
-    }
-
-    .main-container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .field-validation-error {
-        color: Red;
-    }
-
-    .validation-summary-errors {
-        font-weight: bold;
-        color: Red;
-    }
-   
-</style>
+ 
 
 <div class="navbar navbar-inverse navbar-fixed-top" style="opacity:0.95;">
     <div class="container">
@@ -45,19 +10,19 @@
                 <span class="icon-bar"></span>
             </button>
             <li>
-                <a class = "logo navbar-brand"> High - Elo</a>
+                <a class = "logo navbar-brand" routerLink="home"> High - Elo</a>
             </li>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a class="menu"> Home</a>
+                    <a class="menu" routerLink="home"> Home</a>
                 </li>
                 <li>
-                    <a class="menu"> Buy Boost</a>
+                    <a class="menu" > Buy Boost</a>
                 </li>
                 <li>
-                    <a class="menu"> FAQ</a>
+                    <a class="menu" routerLink="faq"> FAQ</a>
                 </li>
                 <li>
                     <a class="menu"> Contact</a>
@@ -66,3 +31,5 @@
         </div>
     </div>
 </div>
+
+<router-outlet></router-outlet>
