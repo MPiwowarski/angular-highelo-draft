@@ -8,6 +8,7 @@ import { MenuComponent } from './components/mainRoute/shared/menu/menu.component
 import { HomeComponent } from './components/mainRoute/home/home.component';
 import { LayoutComponent as MainRouteLayout } from './components/mainRoute/shared/layout/layout.component';
 import { FaqComponent } from './components/mainRoute/faq/faq.component';
+import { WinsBoostPurchaseComponent } from './components/mainRoute/winsBoostPurchase/wins-boost-purchase.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
     HomeComponent,
     FaqComponent,
     MainRouteLayout,
+    WinsBoostPurchaseComponent,
   ],
   imports: [
     BrowserModule,
