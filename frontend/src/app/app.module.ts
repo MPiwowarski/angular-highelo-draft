@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -23,14 +23,16 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     MenuComponent,
     HomeComponent,
-    FaqComponent,
-    MainRouteLayout,
+    FaqComponent, 
     WinsBoostPurchaseComponent,
+    
   ],
   imports: [
+    MainRouteLayout,
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
