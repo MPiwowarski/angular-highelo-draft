@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
-]
+];
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     MenuComponent,
     HomeComponent,
-    FaqComponent, 
+    FaqComponent,
     WinsBoostPurchaseComponent,
     MainRouteLayout,
   ],
