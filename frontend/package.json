@@ -24,7 +24,7 @@
     "bootstrap": "3.3.7",
     "core-js": "^2.5.4",
     "jquery": "^2.2.4",
-    "karma-edge-launcher": "^0.4.2",
+    "karma-phantomjs-launcher": "^1.0.4",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },
