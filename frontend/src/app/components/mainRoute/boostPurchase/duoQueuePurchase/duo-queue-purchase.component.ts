@@ -6,12 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./duo-queue-purchase.component.scss']
 })
 export class DuoQueuePurchaseComponent {
-
+  public sliderVal = 1;
   constructor() { }
 
-  onChangeAchievement(eventStr: string, eRef) {
-
-     alert('eventStr ' + eventStr)
-
+  onPriceSliderChange(val) {
+    this.sliderVal = val;
   }
+
 }

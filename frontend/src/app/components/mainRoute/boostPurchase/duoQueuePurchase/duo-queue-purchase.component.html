@@ -54,14 +54,13 @@
             <br />
             <div>
               <p align="center">
-                <span style="font-size: 130px;" id="ex6SliderVal">1</span>
+                <span style="font-size: 130px;" id="ex6SliderVal">{{sliderVal}}</span>
               </p>
             </div>
-            <br />
 
+            <input type="range" #slider min="1" max="10" value="1" class="slider" (change)="onPriceSliderChange(slider.value)">
 
-            <input type="range" min="1" max="10" value="1" class="slider" id="myRange" ng-change="onSliderChange()">
-
+            <br/>
           </div>
 
         </div>
