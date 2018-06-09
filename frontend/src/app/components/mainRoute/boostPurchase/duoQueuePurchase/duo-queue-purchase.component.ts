@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import OrderImages from '../../../../partialViews/order-image.html';
+var OrderImages = require('../../../../partialViews/order-image.html');
 
 @Component({
   selector: 'app-duo-queue-purchase',
