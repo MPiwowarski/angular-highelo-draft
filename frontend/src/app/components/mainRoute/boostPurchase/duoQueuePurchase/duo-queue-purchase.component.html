@@ -58,7 +58,8 @@
               </p>
             </div>
 
-        <input type="range" #slider min="1" max="10" value="1" [(ngModel)]="sliderVal" class="slider" (change)="onPriceSliderChange(slider.value)">
+            <input type="range" #slider min="1" max="10" value="1" [(ngModel)]="sliderVal" class="slider" (change)="onPriceSliderChange(slider.value)">
+            <div class="blog-post" [innerHtml]="orderImages"></div>
             <br/>
           </div>
 
