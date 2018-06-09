@@ -32,7 +32,8 @@
               "./node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css",
               "styles/bs-callout.css",
               "styles/bs-extension.css",
-              "styles/pagedList.css"
+              "styles/pagedList.css",
+              "styles/range-slider.scss"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js",

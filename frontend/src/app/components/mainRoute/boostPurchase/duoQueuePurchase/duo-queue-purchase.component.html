@@ -59,12 +59,9 @@
             </div>
             <br />
 
-            <div class="well">
-                <input id="ex6" type="text" data-slider-min="-5" data-slider-max="20" data-slider-step="1" data-slider-value="3"/>
-                <span id="ex6CurrentSliderValLabel">Current Slider Value: <span id="ex6SliderVal">3</span></span>
-              <!-- <input id="ex6" type="text" data-slider-min="1" data-slider-max="10" data-slider-step="1" data-slider-value="1" /> -->
 
-            </div>
+            <input type="range" min="1" max="10" value="1" class="slider" id="myRange" ng-change="onSliderChange()">
+
           </div>
 
         </div>
@@ -82,6 +79,7 @@
   </div>
 
 </div>
+
 
 <!-- <div id="prices-dictionary">
 
