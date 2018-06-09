@@ -28,8 +28,8 @@
             <h3>
               <strong class="text-center">Current Standing</strong>
             </h3>
-            <div id="order-starting">
-
+            <div id="order-starting" [innerHtml]="orderImage">
+              {{orderImage}}
             </div>
             <!-- @Html.TextBoxFor(i => i.Order.WinsCount, new { id = "winsCount", @type = "number", style = "display: none;" }) -->
             <br />
