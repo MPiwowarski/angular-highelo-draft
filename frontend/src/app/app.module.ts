@@ -9,7 +9,7 @@ import { MenuComponent } from './components/mainRoute/shared/menu/menu.component
 import { HomeComponent } from './components/mainRoute/home/home.component';
 import { LayoutComponent as MainRouteLayout } from './components/mainRoute/shared/layout/layout.component';
 import { FaqComponent } from './components/mainRoute/faq/faq.component';
-import { WinsBoostPurchaseComponent } from './components/mainRoute/winsBoostPurchase/wins-boost-purchase.component';
+import { DuoQueuePurchaseComponent } from './components/mainRoute/boostPurchase/duoQueuePurchase/duo-queue-purchase.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +18,8 @@ import { WinsBoostPurchaseComponent } from './components/mainRoute/winsBoostPurc
     MenuComponent,
     HomeComponent,
     FaqComponent,
-    WinsBoostPurchaseComponent,
     MainRouteLayout,
+    DuoQueuePurchaseComponent,
   ],
   imports: [
     BrowserModule,
