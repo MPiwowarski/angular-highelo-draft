@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app-routes';
@@ -22,6 +23,7 @@ import { DuoQueuePurchaseComponent } from './components/mainRoute/boostPurchase/
     DuoQueuePurchaseComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(AppRoutes)
   ],
