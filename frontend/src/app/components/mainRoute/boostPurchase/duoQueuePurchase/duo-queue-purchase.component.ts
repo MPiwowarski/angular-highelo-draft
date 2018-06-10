@@ -1,4 +1,8 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { SeasonRankDictionary } from 'src/app/hardcodedData/SeasonRankDictionary';
+import { LeagueModel } from '../../../../models/dataStructure/LeagueModel';
+import { SeasonRankEnum } from '../../../../models/dataStructure/SeasonRankEnum';
+import { SeasonRankModel } from 'src/app/models/dataStructure/SeasonRankModel';
 const OrderImages = require('../../../../partialViews/order-image.html');
 
 @Component({
@@ -6,20 +10,22 @@ const OrderImages = require('../../../../partialViews/order-image.html');
   templateUrl: './duo-queue-purchase.component.html',
   styleUrls: ['./duo-queue-purchase.component.scss']
 })
-export class DuoQueuePurchaseComponent implements AfterViewInit {
+export class DuoQueuePurchaseComponent implements AfterViewInit, OnInit {
   public sliderVal = 1;
   public orderImages: string;
   public orderImage: string;
 
-  constructor() {
+  public seasonRanks: SeasonRankModel[];
+  public selectedSeasonRank: SeasonRankModel;
+
+  ngOnInit(): void {
     this.orderImages = OrderImages;
+    this.seasonRanks = SeasonRankDictionary.get();
   }
 
   ngAfterViewInit() {
     const unrankedImageSrc = (<HTMLImageElement>document.getElementsByClassName('Unranked_I')[0]).src;
-    console.log(unrankedImageSrc);
     this.orderImage = '<image src=\'' + unrankedImageSrc + '\' />';
-    console.log(this.orderImage);
   }
 
   onPriceSliderChange(val) {

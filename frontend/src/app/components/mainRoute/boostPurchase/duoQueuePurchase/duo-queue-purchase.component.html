@@ -31,9 +31,18 @@
             <div id="order-starting" [innerHtml]="orderImage">
               {{orderImage}}
             </div>
-            <!-- @Html.TextBoxFor(i => i.Order.WinsCount, new { id = "winsCount", @type = "number", style = "display: none;" }) -->
+
             <br />
             <div>
+
+
+              <select class="form-control">
+                <option *ngFor="let seasonRank of seasonRanks" value= {{seasonRank.id}}>
+                  {{seasonRank.Name}}
+                </option>
+              </select>
+
+
               <!-- @Html.DropDownListFor(x => x.Order.StartingLeague, Model.CurrentLeagueControlDataSource, new { @class = "form-control", style = "margin-top:10px;", id = "StartingLeague", })
                                 @Html.ValidationMessageFor(x => x.Order.StartingLeague) -->
             </div>
