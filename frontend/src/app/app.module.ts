@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app-routes';
 
+import { DuoQueuePurchaseService } from './services/mainRoute/boostPurchase/duoQueuePurchase/duo-queue-purchase.service';
+
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/common/pageNotFound/pageNotFound.component';
 import { MenuComponent } from './components/mainRoute/shared/menu/menu.component';
@@ -29,7 +31,9 @@ import { OrderImageComponent } from './components/common/orderImage/order-image.
     BrowserModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [],
+  providers: [
+    DuoQueuePurchaseService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
