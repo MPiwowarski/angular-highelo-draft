@@ -1,11 +1,11 @@
 import { SeasonRankEnum } from './SeasonRankEnum';
 
 export class SeasonRankModel {
-    constructor(public SeasonRank: SeasonRankEnum) {
+    constructor(public seasonRank: SeasonRankEnum) {
 
     }
 
-    get Name(): string {
-        return SeasonRankEnum[this.SeasonRank];
+    get name(): string {
+        return SeasonRankEnum[this.seasonRank];
     }
 }

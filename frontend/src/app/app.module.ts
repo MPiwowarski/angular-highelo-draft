@@ -11,6 +11,7 @@ import { HomeComponent } from './components/mainRoute/home/home.component';
 import { LayoutComponent as MainRouteLayout } from './components/mainRoute/shared/layout/layout.component';
 import { FaqComponent } from './components/mainRoute/faq/faq.component';
 import { DuoQueuePurchaseComponent } from './components/mainRoute/boostPurchase/duoQueuePurchase/duo-queue-purchase.component';
+import { OrderImageComponent } from './components/common/orderImage/order-image.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { DuoQueuePurchaseComponent } from './components/mainRoute/boostPurchase/
     FaqComponent,
     MainRouteLayout,
     DuoQueuePurchaseComponent,
+    OrderImageComponent,
   ],
   imports: [
     FormsModule,
