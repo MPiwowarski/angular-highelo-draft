@@ -35,7 +35,7 @@ export class DuoQueuePurchaseComponent implements OnInit {
     this.selectedRank = this.seasonRanks[0];
     this.divisions = DivisionDictionary.get();
     this.selectedDivision = this.divisions[0];
-    this.orderImageSrc= this.orderImageService.getOrderImageName(null, SeasonRankEnum.Unranked);
+    this.orderImageSrc = this.orderImageService.getOrderImageName(null, SeasonRankEnum.Unranked);
   }
 
   onPriceSliderChange(value) {
@@ -45,18 +45,18 @@ export class DuoQueuePurchaseComponent implements OnInit {
 
   seasonRankOnChange(seasonRank: SeasonRankModel) {
     this.selectedRank = seasonRank;
-    this.orderImageSrc= this.orderImageService.getOrderImageName(this.selectedDivision.division, seasonRank.seasonRank);
+    this.orderImageSrc = this.orderImageService.getOrderImageName(this.selectedDivision.division, seasonRank.seasonRank);
     this.onOrderChange();
   }
 
   divisionOnChange(division: DivisionModel) {
     this.selectedDivision = division;
-    this.orderImageSrc= this.orderImageService.getOrderImageName(division.division, this.selectedRank.seasonRank);
+    this.orderImageSrc = this.orderImageService.getOrderImageName(division.division, this.selectedRank.seasonRank);
     this.onOrderChange();
   }
 
   private onOrderChange() {
-    let orderDto = new DuoQueuePurchaseDto(this.selectedDivision, this.selectedRank, this.sliderValue);
+    const orderDto = new DuoQueuePurchaseDto(this.selectedDivision, this.selectedRank, this.sliderValue);
     this.duoQueuePurchaseService.onOrderChanged(orderDto);
   }
 

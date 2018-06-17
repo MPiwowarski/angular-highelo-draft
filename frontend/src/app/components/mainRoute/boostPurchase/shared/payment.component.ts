@@ -14,7 +14,7 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit() {
     this.duoQueuePurchaseService.orderChanged.subscribe(x => {
-      this.price = this.duoQueuePurchaseService.countPrice(x);   
+      this.price = this.duoQueuePurchaseService.countPrice(x);
     });
   }
 

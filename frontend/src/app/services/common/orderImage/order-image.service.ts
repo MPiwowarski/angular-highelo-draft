@@ -14,7 +14,7 @@ export class OrderImageService {
   getOrderImageName(division: DivisionEnum, seasonRank: SeasonRankEnum) {
     const seasonRankModel = SeasonRankDictionary.getByEnum(seasonRank);
     const path = 'assets/images/division/';
-    if (seasonRank == SeasonRankEnum.Unranked) {
+    if (seasonRank === SeasonRankEnum.Unranked) {
       return path + seasonRankModel.name + '.png';
     }
 
