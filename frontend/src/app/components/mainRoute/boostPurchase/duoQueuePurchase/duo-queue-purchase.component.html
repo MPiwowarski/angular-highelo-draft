@@ -32,25 +32,20 @@
               {{orderImage}}
             </div>
 
-            <br />
             <div>
-
-
-              <select class="form-control">
-                <option *ngFor="let seasonRank of seasonRanks" value= {{seasonRank.id}}>
-                  {{seasonRank.Name}}
+              <select class="form-control" style="margin-top:10px;" [(ngModel)]="selectedRank" #seasonRankSelector (ngModelChange)="seasonRankOnChange($event)">
+                <option *ngFor="let seasonRank of seasonRanks" [ngValue]="seasonRank">
+                  {{seasonRank.name}}
                 </option>
               </select>
 
-
-              <!-- @Html.DropDownListFor(x => x.Order.StartingLeague, Model.CurrentLeagueControlDataSource, new { @class = "form-control", style = "margin-top:10px;", id = "StartingLeague", })
-                                @Html.ValidationMessageFor(x => x.Order.StartingLeague) -->
+              <select *ngIf="selectedRank.seasonRank != 0" class="form-control" style="margin-top:10px;" [(ngModel)]="selectedDivision"
+                #divisionSelector (ngModelChange)="divisionOnChange($event)">
+                <option *ngFor="let division of divisions" [ngValue]="division">
+                  {{division.name}}
+                </option>
+              </select>
             </div>
-            <div>
-              <!-- @Html.DropDownListFor(x => x.Order.StartingDivision, Model.CurrentDivisionControlDataSource, new { @class = "form-control", style = "margin-top:10px;", id = "StartingDivision", })
-                                @Html.ValidationMessageFor(x => x.Order.StartingDivision) -->
-            </div>
-
 
           </div>
 
@@ -63,19 +58,18 @@
             <br />
             <div>
               <p align="center">
-                <span style="font-size: 130px;" id="ex6SliderVal">{{sliderVal}}</span>
+                <span style="font-size: 130px;" >{{sliderValue}}</span>
               </p>
             </div>
 
-            <input type="range" #slider min="1" max="10" value="1" [(ngModel)]="sliderVal" class="slider" (change)="onPriceSliderChange(slider.value)">
-            <div class="blog-post" [innerHtml]="orderImages"></div>
+            <input type="range" #slider min="1" max="10" value="1" [(ngModel)]="sliderValue" class="slider" (change)="onPriceSliderChange(slider.value)">
             <br/>
           </div>
 
         </div>
 
         <div class="col-md-6">
-          <!-- @Html.Partial("~/Views/Shared/_PaymentCard.cshtml", Model.PaymentCard) -->
+          <app-payment></app-payment>
         </div>
 
 
@@ -88,22 +82,4 @@
 
 </div>
 
-
-<!-- <div id="prices-dictionary">
-
-    @foreach (var pr in Model.PriceDictionary)
-    {
-        string item = pr.Index + "," + pr.PriceEuroForOneWin + "," + pr.StartingLeague + "," + pr.StartingDivision;
-        @Html.Hidden("price_" + pr.Index, item, new { @class = "price-dictionary" })
-    }
-</div>
-<div id="interval-dictionary">
-
-    @foreach (var pr in Model.IntervalDictionary)
-    {
-        string item = pr.Index + "," + pr.WinsCount + "," + pr.PercentageImpact;
-        @Html.Hidden("winsCount_" + pr.Index, item, new { @class = "interval-dictionary" });
-    }
-</div>
-
-@Html.Partial("~/Views/Shared/_OrderImage.cshtml") -->
+<app-order-image></app-order-image>

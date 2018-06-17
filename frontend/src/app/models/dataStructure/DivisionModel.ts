@@ -1,11 +1,11 @@
 import { DivisionEnum } from './DivisionEnum';
 
 export class DivisionModel {
-    constructor(public Division: DivisionEnum, public Description: string) {
+    constructor(public division: DivisionEnum, public description: string) {
 
     }
 
-    get Name(): string {
-        return DivisionEnum[this.Division];
+    get name(): string {
+        return DivisionEnum[this.division];
     }
 }
