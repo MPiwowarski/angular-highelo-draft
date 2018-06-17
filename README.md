@@ -8,5 +8,8 @@ To run the project
 
 Changing globally css to scss:https://stackoverflow.com/questions/50223165/get-set-have-been-deprecated-in-favor-of-the-config-command
 
-create component with inside the folder eg:
-ng g c winsBoostPurchase/winsBoostPurchase --spec false --flat true
+create component with registration in app.module.ts, inside the folder eg:
+- ng g c componentName --spec true --flat true
+
+create service
+-  ng generate service serviceName
