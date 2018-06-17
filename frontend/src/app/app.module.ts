@@ -14,6 +14,7 @@ import { LayoutComponent as MainRouteLayout } from './components/mainRoute/share
 import { FaqComponent } from './components/mainRoute/faq/faq.component';
 import { DuoQueuePurchaseComponent } from './components/mainRoute/boostPurchase/duoQueuePurchase/duo-queue-purchase.component';
 import { OrderImageComponent } from './components/common/orderImage/order-image.component';
+import { PaymentComponent } from './components/mainRoute/boostPurchase/shared/payment.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OrderImageComponent } from './components/common/orderImage/order-image.
     MainRouteLayout,
     DuoQueuePurchaseComponent,
     OrderImageComponent,
+    PaymentComponent,
   ],
   imports: [
     FormsModule,
