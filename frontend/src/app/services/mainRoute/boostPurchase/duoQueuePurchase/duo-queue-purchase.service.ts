@@ -8,7 +8,7 @@ export class DuoQueuePurchaseService {
 
   constructor() { }
 
-  order: DuoQueuePurchaseDto;
+  private order: DuoQueuePurchaseDto;
 
   @Output()
   orderChanged: EventEmitter<DuoQueuePurchaseDto> = new EventEmitter();
@@ -18,10 +18,10 @@ export class DuoQueuePurchaseService {
     this.orderChanged.emit(this.order);
   }
 
-  countPrice(orderDto: DuoQueuePurchaseDto): number{
+  countPrice(orderDto: DuoQueuePurchaseDto): number {
     console.log('orderDto: ', orderDto);
     // implementation of the alghorithm
-    return Math.floor(Math.random()*1000);
+    return Math.floor(Math.random() * 1000);
   }
 
 }

@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutes } from './app-routes';
 
 import { DuoQueuePurchaseService } from './services/mainRoute/boostPurchase/duoQueuePurchase/duo-queue-purchase.service';
+import { OrderImageService } from './services/common/orderImage/order-image.service';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './components/common/pageNotFound/pageNotFound.component';
@@ -35,6 +36,7 @@ import { PaymentComponent } from './components/mainRoute/boostPurchase/shared/pa
   ],
   providers: [
     DuoQueuePurchaseService,
+    OrderImageService
   ],
   bootstrap: [AppComponent]
 })

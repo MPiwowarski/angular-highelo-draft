@@ -28,8 +28,8 @@
             <h3>
               <strong class="text-center">Current Standing</strong>
             </h3>
-            <div id="order-starting" [innerHtml]="orderImage">
-              {{orderImage}}
+            <div>
+              <img [src]="orderImageSrc" alt="Order Image" />
             </div>
 
             <div>
@@ -58,7 +58,7 @@
             <br />
             <div>
               <p align="center">
-                <span style="font-size: 130px;" >{{sliderValue}}</span>
+                <span style="font-size: 130px;">{{sliderValue}}</span>
               </p>
             </div>
 
@@ -74,8 +74,6 @@
 
 
       </div>
-
-
 
     </div>
   </div>

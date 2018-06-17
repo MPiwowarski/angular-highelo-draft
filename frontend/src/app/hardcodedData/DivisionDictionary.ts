@@ -12,4 +12,9 @@ export class DivisionDictionary {
         }
         return result;
     }
+
+    public static getByEnum(division: DivisionEnum): DivisionModel {
+        return this.get().filter(x => x.division === division)[0];
+    }
+
 }

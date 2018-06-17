@@ -1,6 +1,5 @@
 import { LeagueModel } from '../models/dataStructure/LeagueModel';
 import { LeagueEnum } from '../models/dataStructure/LeagueEnum';
-import { SeasonRankEnum } from '../models/dataStructure/SeasonRankEnum';
 
 export class LeagueDictionary {
 

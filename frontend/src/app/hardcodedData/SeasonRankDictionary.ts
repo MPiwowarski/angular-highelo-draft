@@ -14,4 +14,8 @@ export class SeasonRankDictionary {
         return result;
     }
 
+    public static getByEnum(seasonRank: SeasonRankEnum): SeasonRankModel {
+        return this.get().filter(x => x.seasonRank === seasonRank)[0];
+    }
+
 }
