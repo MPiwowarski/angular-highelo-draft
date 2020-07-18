@@ -1,5 +1,8 @@
 "# high-elo" 
 
+The project contains a draft project of the high-elo portal made in Angular and .net core.
+The purpose was of it was to explore possible solutions and estimation of implementation complexity.
+
 To install node_modules:
 - yarn
 
